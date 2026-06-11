@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연남 가라오케 예약 블로그 | 여기다</title>
+    <meta name="description" content="연남 가라오케 예약 블로그. 진짜 파티가 뭔지 보여줄게. 룸이 무슨 대학 도서관이냐? 여긴 다르다. 전화 010-6279-0862로 지금 예약해.">
+    <meta name="keywords" content="연남 가라오케, 연남 가라오케 예약, 연남 노래방 블로그, 가라오케 꿀팁, 연남 핫플 후기, 가라오케 파티 노하우">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-acid-yellow">
+    <link rel="canonical" href="https://t3b06-yn-karaoke-rsv-1.vercel.app/blog">
+    <!-- OG 메타 -->
+    <meta property="og:title" content="연남 가라오케 블로그 | 존나게 써내려간 진실">
+    <meta property="og:description" content="가라오케 예약은 쎾스다. 연남 가라오케에서 진짜 파티를 즐기는 법. 니 인생을 바꿀 5가지 방법.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://t3b06-yn-karaoke-rsv-1.vercel.app/blog">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            background: #0f0f0f;
+            color: #f0f0f0;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4 { font-weight: 900; text-transform: uppercase; letter-spacing: -0.05em; line-height: 1.1; }
+        h1 { font-size: 3.5rem; margin-bottom: 1.5rem; color: #e0ff00; text-shadow: 4px 4px 0 #000; }
+        h2 { font-size: 2.5rem; margin-bottom: 1rem; color: #e0ff00; border-bottom: 4px solid #e0ff00; padding-bottom: 0.5rem; }
+        h3 { font-size: 1.75rem; margin-bottom: 0.75rem; color: #e0ff00; }
+        p { margin-bottom: 1.25rem; font-size: 1.1rem; }
+        a { color: #e0ff00; text-decoration: none; font-weight: bold; border-bottom: 2px solid transparent; transition: all 0.2s; }
+        a:hover { border-bottom-color: #e0ff00; color: #fff; background: #000; }
+        /* ===== LAYOUT ===== */
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        section { padding: 4rem 0; border-bottom: 2px dashed #333; }
+        .flex-row { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; justify-content: space-between; }
+        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        /* ===== NAV ===== */
+        nav { background: #1a1a1a; border-bottom: 4px solid #e0ff00; padding: 0 2rem; position: sticky; top: 0; z-index: 100; }
+        nav .flex-row { padding: 1rem 0; margin: 0; }
+        nav ul { list-style: none; display: flex; gap: 2rem; margin: 0; }
+        nav a { font-size: 1.2rem; font-weight: 700; text-transform: uppercase; border-bottom: none; padding: 0.5rem 1rem; transition: background 0.2s; }
+        nav a:hover { background: #e0ff00; color: #000; }
+        .logo { font-size: 2rem; font-weight: 900; color: #e0ff00; }
+        .hamburger { display: none; flex-direction: column; gap: 4px; cursor: pointer; }
+        .hamburger span { width: 30px; height: 4px; background: #e0ff00; }
+        @media (max-width: 768px) {
+            nav ul { display: none; flex-direction: column; background: #1a1a1a; position: absolute; top: 70px; left: 0; width: 100%; padding: 1rem; gap: 1rem; }
+            nav ul.active { display: flex; }
+            .hamburger { display: flex; }
+        }
+        /* ===== TEL LINK ===== */
+        .tel-link { display: inline-block; background: #e0ff00; color: #000; font-size: 1.5rem; font-weight: 900; padding: 0.75rem 2rem; border: 4px solid #000; margin-top: 1rem; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.2s; }
+        .tel-link:hover { background: #000; color: #e0ff00; border-color: #e0ff00; transform: scale(1.05); }
+        /* ===== BLOG SPECIFIC ===== */
+        .article-content { background: #1a1a1a; padding: 3rem; border: 4px solid #e0ff00; margin-top: 2rem; }
+        .article-content p:first-child::first-letter { font-size: 4rem; font-weight: 900; color: #e0ff00; float: left; margin-right: 0.5rem; line-height: 1; }
+        .badge { display: inline-block; background: #e0ff00; color: #000; padding: 0.25rem 1rem; font-weight: 900; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 1rem; }
+        footer { background: #1a1a1a; padding: 2rem; text-align: center; border-top: 4px solid #e0ff00; margin-top: auto; }
+    </style>
+</head>
+<body>
+    <!-- NAV -->
+    <nav>
+        <div class="flex-row">
+            <a href="/" class="logo">연가🎤</a>
+            <div class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </div>
+            <ul>
+                <li><a href="/">홈</a></li>
+                <li><a href="/rooms">룸</a></li>
+                <li><a href="/pricing">가격</a></li>
+                <li><a href="/blog">블로그</a></li>
+                <li><a href="tel:010-6279-0862">전화예약</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+        <section>
+            <h1>블로그</h1>
+            <p style="font-size:1.5rem; font-weight:900; margin-bottom:0;">니가 몰랐던 진짜 가라오케 썰</p>
+            <p style="color:#888; margin-bottom:2rem;">by 연남 가라오케 예약 팀 · 2025.04.10</p>
+
+            <div class="article-content">
+                <span class="badge">🔥 핫한 꿀팁</span>
+                <h2>연남 가라오케에서 진짜 파티를 즐기는 법</h2>
+                <p>야. 가라오케 예약이 뭐라고 생각해? 그냥 방 하나 빌리고 노래 불러? 병신. 진짜는 달라. 여긴 연남 가라오케야. 니가 상상한 그 지루한 노래방이 아니라는 뜻이지.</p>
+                <p>첫째, <strong>예약은 바로 전화해라.</strong> 010-6279-0862. 앱이나 카톡? 그런 거 하지 마. 전화 한 통이면 끝. 왜? 우리는 니가 진짜로 원하는 걸 알고 있으니까. 미리 와서 맥주 까고, 조명 맞추고, 사운드 체크. 니가 도착했을 때 이미 룸은 불타고 있어야 해.</p>
+                <p>둘째, <strong>무제한 음료 씨발 좀 믿어라.</strong> "무제한이라고? 맥주 한 잔 주고 끝인 거 아냐?" 아니. 진짜 무제한이야. 하이볼, 소주, 맥주, 양주. 니가 마실 수 있을 만큼 갖다줘. 왜? 우리는 니가 취해서 미친 듯이 노래 부르는 걸 원해. 그게 진짜 파티야.</p>
+                <p>셋째, <strong>사운드 시스템 개좋다.</strong> 다른 데 가면 스피커에서 지지직 소리 나고, 마이크 울리고. 여긴 24시간 룸마다 커스텀 튜닝. 니 목소리가 콘서트장처럼 울려 퍼짐. 술 취해서 방구석에서 엑소 따라 부르는 거랑 차원이 달라.</p>
+                <p>넷째, <strong>니 인생을 바꿀 플레이리스트.</strong> "아 나는 옛날 노래만 불러요" ㅄ. 여긴 90년대부터 2025년 최신곡까지 실시간 업데이트. 니가 부르고 싶은 노래가 없으면 그냥 없는 거임? 아니. 직원한테 말해. 10분이면 추가해줌. 씨발 왜? 고객이 왕이니까.</p>
+                <p>다섯째, <strong>룸 콘셉트 빡친다.</strong> 일반 룸? 지루해. 여긴 '블랙아웃 룸' '네온 지옥 룸' '스트립 클럽 룸'까지. 니가 원하는 분위기로 고를 수 있어. 데이트? 비즈니스? 친구랑 정모? 각자 다르게 즐겨라. 예약할 때 무조건 얘기해. "저는 네온 지옥으로요" 이러면 룸 입구부터 조명이 니를 반겨.</p>
+                <p>결론: <strong>연남 가라오케 예약은 그냥 예약이 아니다.</strong> 니 인생의 터닝 포인트다. 전화 한 통이면 24시간 동안 니가 미친 듯이 즐길 준비 끝. <a href="tel:010-6279-0862">010-6279-0862</a> 지금 바로 눌러. 기다리지 마. 기다리면 니 인생이 기다려짐.</p>
+            </div>
+
+            <div style="margin-top:3rem; padding:2rem; background:#1a1a1a; border:2px solid #333;">
+                <h3>🔥 실시간 반응</h3>
+                <p><strong>@djrapstar:</strong> "여기서 노래방 처음 가봤는데 미쳤다. 사운드가 우리 동네 클럽보다 좋음"</p>
+                <p><strong>@soju_lover:</strong> "무제한 음료 진짜임? 나 맥주 10병 마시고도 더 달랬는데 줌 ㅋㅋㅋ"</p>
+                <p><strong>@karaoke_king:</strong> "니들은 그냥 가라오케 가라. 여긴 진짜 파티 장소다. 예약은 전화로!"</p>
+                <a href="tel:010-6279-0862" class="tel-link">📞 지금 전화 예약</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 연남 가라오케 예약 | 24시간 핫라인: <a href="tel:010-6279-0862">010-6279-0862</a></p>
+        <p style="color:#666; font-size:0.9rem;">주소: 서울 마포구 연남동 123-45 | 무제한 음료 · 미친 사운드 · 인생 바꾸는 경험</p>
+    </footer>
+
+    <script>
+        // hamburger toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
