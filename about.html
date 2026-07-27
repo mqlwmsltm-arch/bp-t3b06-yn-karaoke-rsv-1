@@ -2,362 +2,71 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>연남 가라오케 예약 | 정보 — 여기 진짜다</title>
-    <meta name="description" content="연남 가라오케 예약, 진짜 정보는 여기다. 24시간 운영, 무제한 음료, 미친 사운드. 위치, 가격, 시스템 전격 공개. 전화 010-6279-0862로 지금 바로 물어봐.">
-    <meta name="keywords" content="연남 가라오케, 연남 가라오케 예약, 연남 노래방 정보, 가라오케 가격, 연남 핫플, 24시간 가라오케, 연남 술집, 연남 파티룸">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="bpaas-design-system" content="brutalist-avantgarde">
     <meta name="bpaas-design-theme" content="kr-acid-yellow">
-    <link rel="canonical" href="https://t3b06-yn-karaoke-rsv-1.vercel.app/info">
-    <!-- OG 메타 -->
-    <meta property="og:title" content="연남 가라오케 예약 | 정보 — 니가 알던 가라오케는 없다">
-    <meta property="og:description" content="연남 가라오케 예약, 진짜 정보는 여기. 24시간 풀옵션 룸, 무제한 음료, 그리고 니 목청 터지는 사운드. 위치, 가격, 룸 시스템 전격 공개. 010-6279-0862로 지금 콜.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://t3b06-yn-karaoke-rsv-1.vercel.app/info">
-    <meta property="og:image" content="https://t3b06-yn-karaoke-rsv-1.vercel.app/og-info.jpg">
-    <meta property="og:locale" content="ko_KR">
-    <meta property="og:site_name" content="연남 가라오케 예약">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="연남 가라오케 예약 | 정보">
-    <meta name="twitter:description" content="연남 가라오케 예약, 진짜 정보 여기. 24시간, 무제한, 미친 사운드. 010-6279-0862.">
-    <meta name="twitter:image" content="https://t3b06-yn-karaoke-rsv-1.vercel.app/og-info.jpg">
-    <style>
-        /* ===== RESET & BASE ===== */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Arial Black', 'Impact', 'Helvetica Neue', sans-serif;
-            background: #0d0d0d;
-            color: #f0f0f0;
-            line-height: 1.4;
-            -webkit-font-smoothing: antialiased;
-        }
-        /* ===== TYPOGRAPHY ===== */
-        h1, h2, h3, h4 {
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-            font-weight: 900;
-        }
-        h1 {
-            font-size: clamp(2.8rem, 12vw, 5rem);
-            line-height: 0.9;
-            color: #facc15;
-            text-shadow: 4px 4px 0 #000, 8px 8px 0 #e11d48;
-            margin-bottom: 0.5rem;
-        }
-        h2 {
-            font-size: clamp(2rem, 6vw, 3.2rem);
-            border-left: 8px solid #facc15;
-            padding-left: 1rem;
-            margin: 2rem 0 1.5rem;
-            color: #fff;
-        }
-        h3 {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
-            margin-bottom: 0.75rem;
-            color: #facc15;
-        }
-        p {
-            font-size: 1.1rem;
-            line-height: 1.5;
-            margin-bottom: 1rem;
-            font-weight: 400;
-        }
-        a {
-            color: #facc15;
-            text-decoration: underline wavy 2px;
-            text-underline-offset: 4px;
-            transition: all 0.1s ease;
-        }
-        a:hover {
-            color: #fff;
-            background: #e11d48;
-            text-decoration: none;
-            padding: 0 0.2rem;
-        }
-        /* ===== LAYOUT ===== */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.2rem;
-        }
-        section {
-            padding: 3rem 0;
-            border-bottom: 4px solid #222;
-        }
-        section:last-child {
-            border-bottom: none;
-        }
-        .flex-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-        .grid-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        /* ===== NAV ===== */
-        nav {
-            background: #0d0d0d;
-            padding: 1rem 0;
-            border-bottom: 4px solid #facc15;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.2rem;
-        }
-        .nav-logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: #facc15;
-            text-decoration: none;
-            letter-spacing: -0.03em;
-        }
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        .nav-links a {
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-decoration: none;
-            text-transform: uppercase;
-            color: #fff;
-            padding: 0.3rem 0.6rem;
-            border: 2px solid transparent;
-            transition: all 0.1s;
-        }
-        .nav-links a:hover,
-        .nav-links a.active {
-            border-color: #facc15;
-            background: #facc15;
-            color: #0d0d0d;
-            text-decoration: none;
-        }
-        .hamburger {
-            display: none;
-            background: none;
-            border: 2px solid #facc15;
-            color: #facc15;
-            font-size: 2rem;
-            padding: 0.2rem 0.6rem;
-            cursor: pointer;
-        }
-        .tel-link {
-            display: inline-block;
-            background: #e11d48;
-            color: #fff;
-            font-weight: 900;
-            font-size: 1.3rem;
-            padding: 0.5rem 1.2rem;
-            text-decoration: none;
-            border: 2px solid #facc15;
-            transition: all 0.1s;
-            white-space: nowrap;
-        }
-        .tel-link:hover {
-            background: #facc15;
-            color: #0d0d0d;
-            border-color: #e11d48;
-        }
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #0d0d0d;
-                border-bottom: 4px solid #facc15;
-                padding: 1rem;
-                gap: 1rem;
-            }
-            .nav-links.open {
-                display: flex;
-            }
-            .hamburger {
-                display: block;
-            }
-            .nav-inner {
-                flex-wrap: wrap;
-            }
-            .tel-link {
-                font-size: 1rem;
-                padding: 0.4rem 0.8rem;
-            }
-        }
-        /* ===== HERO ===== */
-        .hero {
-            padding: 4rem 0 3rem;
-            background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
-            border-bottom: 8px solid #facc15;
-        }
-        .hero-tag {
-            display: inline-block;
-            background: #e11d48;
-            color: #fff;
-            font-weight: 900;
-            font-size: 0.9rem;
-            padding: 0.3rem 0.8rem;
-            margin-bottom: 1rem;
-            letter-spacing: 0.1em;
-        }
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 700px;
-            color: #ccc;
-        }
-        /* ===== CARDS ===== */
-        .card {
-            background: #1a1a1a;
-            border: 3px solid #333;
-            padding: 1.5rem;
-            transition: all 0.1s;
-        }
-        .card:hover {
-            border-color: #facc15;
-            transform: translate(-2px, -2px);
-            box-shadow: 6px 6px 0 #e11d48;
-        }
-        .card h3 {
-            margin-top: 0;
-        }
-        .card p {
-            color: #aaa;
-            font-size: 0.95rem;
-        }
-        .card .highlight {
-            color: #facc15;
-            font-weight: 700;
-        }
-        /* ===== LIST ===== */
-        .info-list {
-            list-style: none;
-            padding: 0;
-        }
-        .info-list li {
-            padding: 1rem 0;
-            border-bottom: 2px dashed #333;
-            display: flex;
-            gap: 1rem;
-            font-size: 1.1rem;
-        }
-        .info-list li:last-child {
-            border-bottom: none;
-        }
-        .info-list .label {
-            color: #facc15;
-            font-weight: 900;
-            min-width: 100px;
-            text-transform: uppercase;
-        }
-        /* ===== FAQ ===== */
-        .faq-item {
-            background: #1a1a1a;
-            border: 2px solid #222;
-            padding: 1.2rem 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .faq-item h4 {
-            font-size: 1.2rem;
-            color: #facc15;
-            margin-bottom: 0.5rem;
-            cursor: default;
-        }
-        .faq-item p {
-            color: #bbb;
-            margin-bottom: 0;
-        }
-        /* ===== FOOTER ===== */
-        footer {
-            padding: 2rem 0;
-            text-align: center;
-            border-top: 4px solid #facc15;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            color: #666;
-        }
-        footer a {
-            color: #facc15;
-        }
-    </style>
+    <title>연남 가라오케 예약 – 정보</title>
+    <meta name="description" content="연남 가라오케 예약 페이지에서 비용을 구성하는 항목과 조건 변화에 따른 가격 변동을 상세히 안내합니다. 현명한 선택을 위한 비교 포인트를 제공합니다.">
+    <meta name="keywords" content="연남 가라오케, 가라오케 예약, 연남 가라오케 비용, 연남 가라오케 선택 기준">
+    <link rel="canonical" href="https://yeonnam-song-room.namanavi.com/about.html">
+    <meta property="og:title" content="연남 가라오케 예약 — 비용 구조와 조건별 선택 가이드">
+    <meta property="og:description" content="연남 가라오케의 비용 항목과 변동 요인을 파악하고, 최적의 선택을 위한 체크리스트를 확인하세요.">
+    <link rel="stylesheet" href="styles.css">
+  <meta property="og:url" content="https://yeonnam-song-room.namanavi.com/about.html">
 </head>
 <body>
-    <!-- 네비게이션 -->
-    <nav>
-        <div class="nav-inner">
-            <a href="/" class="nav-logo">YN KARAOKE</a>
-            <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
-            <ul class="nav-links">
-                <li><a href="/">홈</a></li>
-                <li><a href="/info" class="active">정보</a></li>
-                <li><a href="/gallery">갤러리</a></li>
-                <li><a href="/contact">예약</a></li>
-            </ul>
-            <a href="tel:010-6279-0862" class="tel-link">📞 010-6279-0862</a>
-        </div>
-    </nav>
+    <header>
+        <h1>연남 가라오케 예약 – 정보</h1>
+        <nav class="m-btn-pn9q-menu">
+            <a href="/overview">개요</a>
+            <a href="/pricing">가격</a>
+            <a href="/faq">FAQ</a>
+            <a href="/contact">문의</a>
+        </nav>
+    </header>
 
-    <!-- 히어로 섹션 -->
-    <section class="hero">
-        <div class="container">
-            <span class="hero-tag">🔊 진짜 정보는 여기</span>
-            <h1>연남 가라오케<br>시스템 완전 공개</h1>
-            <p>니가 알던 가라오케는 여기 없다. 24시간 불꽃, 무제한 음료, 박력 사운드. 지금 바로 까발리는 내부 정보.</p>
-            <a href="tel:010-6279-0862" class="tel-link" style="margin-top:1rem; display:inline-block;">🔥 지금 전화해서 확인해</a>
-        </div>
+    <section id="overview">
+        <h2>연남 가라오케 서비스 개요</h2>
+        <p>연남동은 젊은 층과 예술가들이 선호하는 문화 복합 지역으로, 다양한 음악 공간이 밀집해 있습니다. 이 지역 내 가라오케는 최신 음향 설비와 독립적인 방음 설계가 적용돼, 개인·소규모 모임에 최적화된 환경을 제공합니다. 예약 전 반드시 확인해야 할 기본적인 운영 방침은 영업 시간, 최소 이용 인원, 사전 결제 방식이며, 이는 공식 웹사이트와 현장 안내문에 모두 명시됩니다.</p>
+        <p>서비스는 1시간 단위로 운영되며, 시간 연장 시 추가 요금이 발생합니다. 또한, 사전 예약 시 고객에게 제공되는 전용 QR 코드를 통해 입장 전 자동 체크인 절차가 진행되어, 대기 시간을 최소화하고 원활한 진행을 보장합니다. 모든 방은 독립된 조명과 온도 제어가 가능하도록 설계돼, 사용 목적(노래 연습, 파티, 기업 워크숍)에 따라 맞춤형 분위기를 연출할 수 있습니다.</p>
     </section>
 
-    <!-- 핵심 정보 그리드 -->
-    <section>
-        <div class="container">
-            <h2>📍 위치 & 접근성</h2>
-            <div class="grid-cards">
-                <div class="card">
-                    <h3>주소</h3>
-                    <p class="highlight">서울 마포구 연남동 241-xx</p>
-                    <p>연남 메인 스트리트에서 50m. 홍대입구역 3번 출구 도보 7분. 주차는 근처 공영주차장 이용.</p>
-                </div>
-                <div class="card">
-                    <h3>운영 시간</h3>
-                    <p class="highlight">24시간 연중무휴</p>
-                    <p>오전 5시에 와도 문 활짝. 새벽 3시에 미친 듯이 부르고 싶다면? 언제든 환영.</p>
-                </div>
-                <div class="card">
-                    <h3>주변 랜드마크</h3>
-                    <p>연남동 카페거리, 경의선 책거리, 망원시장 도보 10분. 놀러 왔다가 들르기 딱 좋은 위치.</p>
-                </div>
-            </div>
+    <section id="pricing">
+        <h2>가격 구조와 변동 요인</h2>
+        <div class="r-grid-mjvk">
+            <div class="r-img-s69f"><span>시간당 기본 요금</span></div>
+            <div class="r-img-s69f"><span>인원 추가 요금</span></div>
+            <div class="r-img-s69f"><span>프리미엄 음원 옵션</span></div>
+            <div class="r-img-s69f"><span>특별 이벤트 패키지</span></div>
         </div>
+        <p>기본 요금은 1인당 1시간 이용을 기준으로 설정되며, 실제 금액은 방 크기와 설비 수준에 따라 차이가 있습니다. 인원 수가 최소 인원(2명)을 초과할 경우 추가 인원당 일정 금액이 부과되며, 이는 사전에 정해진 요율표에 따라 자동 계산됩니다.</p>
+        <p>프리미엄 음원 옵션은 최신 히트곡 및 해외 곡을 포함한 전체 음원 데이터베이스 접근을 가능하게 하며, 기본 제공 음원 외에 추가 요금을 부과합니다. 이벤트 패키지는 연말 파티, 생일 파티 등 특정 테마에 맞춘 장식 및 서비스가 포함돼, 별도 견적이 제공됩니다. 모든 가격은 사전 결제 시 10% 할인 혜택을 적용받을 수 있습니다.</p>
     </section>
 
-    <!-- 시스템 & 가격 상세 -->
-    <section>
-        <div class="container">
-            <h2>⚡ 시스템 & 가격 — 숨기는 거 없다</h2>
-            <ul class="info-list">
-                <li><span class="label">룸 타입</span> <span>소형(2~4인) / 중형(5~8인) / 대형(9~15인) / VIP(16~25인)</span></li>
-                <li><span class="label">가격</span> <span>시간제: 기본 2시간 50,000원부터. 심
+    <section id="checklist">
+        <h2>예약 전 반드시 확인해야 할 체크리스트</h2>
+        <p>예약 전에는 이용 목적에 맞는 방 유형을 선택하고, 예상 인원 수와 이용 시간을 정확히 입력해야 합니다. 또한, 선택한 음원 옵션이 포함되는지 여부와, 음향 장비(마이크, 스피커)의 추가 필요 여부를 사전에 확인하는 것이 중요합니다.</p>
+        <p>예약 시 제공되는 약관에는 취소 정책, 연장 및 추가 요금 기준, 그리고 방 내 금지 사항(음식·음료 반입 제한 등)이 명시돼 있습니다. 특히, 연속 예약이 필요한 경우 동일 시간대에 중복 예약이 발생하지 않도록 사전 확인이 필요합니다.</p>
+    </section>
+
+    <section id="faq">
+        <h2>자주 묻는 질문 (FAQ)</h2>
+        <h3>Q1. 최소 이용 시간은 어떻게 되나요?</h3>
+        <p>A1. 모든 방은 최소 1시간 이용이 기본이며, 30분 단위 연장이 가능합니다. 30분 이하의 추가 이용은 불가합니다.</p>
+        <h3>Q2. 인원 초과 시 추가 비용은 어떻게 계산되나요?</h3>
+        <p>A2. 기본 인원(2명)을 초과한 경우, 1인당 10분당 일정 금액이 자동 부과됩니다. 이는 시스템에서 실시간으로 계산되어 결제 금액에 반영됩니다.</p>
+        <h3>Q3. 예약 취소는 언제까지 가능한가요?</h3>
+        <p>A3. 예약일 24시간 전까지는 전액 환불이 가능하고, 24시간 이내 취소 시 50% 환불 정책이 적용됩니다. 단, 특별 이벤트 패키지는 별도 취소 규정이 적용될 수 있습니다.</p>
+    </section>
+
+    <section id="local">
+        <h2>연남 지역 특성 및 가라오케 활용 팁</h2>
+        <p>연남동은 대중교통 접근성이 뛰어나며, 지하철 2호선 홍대입구역과 도보 5분 거리 내에 위치해 있습니다. 주변에는 다양한 카페와 음식점이 밀집해 있어, 가라오케 이용 전후에 식사나 커피를 즐기기 좋은 환경을 제공합니다.</p>
+        <p>특히, 저녁 시간대(18:00~22:00)에는 직장인 및 대학생들의 예약 수요가 집중되므로 사전 예약을 권장합니다. 주말에는 이벤트 및 파티 예약이 급증하므로, 가능한 빨리 예약 일정을 확정하는 것이 안전합니다.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 연남 가라오케 예약 서비스. 모든 권리 보유.</p>
+    </footer>
 </body>
 </html>
