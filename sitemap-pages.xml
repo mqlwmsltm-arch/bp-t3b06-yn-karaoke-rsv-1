@@ -46,6 +46,31 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://yeonnam-song-room.namanavi.com/posts/gemini-coverage-20260722-0386.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yeonnam-song-room.namanavi.com/posts/interview-001-15ko7pz.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yeonnam-song-room.namanavi.com/posts/qa-001-o4ntut.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yeonnam-song-room.namanavi.com/posts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://yeonnam-song-room.namanavi.com/posts/t3link-002-15ko7pz.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://yeonnam-song-room.namanavi.com/posts/gemini-coverage-20260719-0426.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -116,11 +141,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://yeonnam-song-room.namanavi.com/posts/gemini-coverage-20260722-0386.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://yeonnam-song-room.namanavi.com/posts/gemini-coverage-20260722-0387.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -167,31 +187,6 @@
   </url>
   <url>
     <loc>https://yeonnam-song-room.namanavi.com/posts/gemini-coverage-20260722-0396.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yeonnam-song-room.namanavi.com/posts/interview-001-15ko7pz.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yeonnam-song-room.namanavi.com/posts/qa-001-o4ntut.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yeonnam-song-room.namanavi.com/posts/t3link-002-15ko7pz.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yeonnam-song-room.namanavi.com/posts.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yeonnam-song-room.namanavi.com/posts-2.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
